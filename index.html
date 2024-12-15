@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0;url=intro.html">
-    <title>Redirecting...</title>
-</head>
-<body>
-    <p>If you are not redirected automatically, <a href="intro.html">click here</a>.</p>
-</body>
-</html>
-<script>
-    
-    if (!localStorage.getItem('visitedIntro')) {
-        window.location.href = "intro.html";
-    }
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const visitedIntro = localStorage.getItem('visitedIntro');
+            if (!visitedIntro) {
+                // Redirect to intro if not marked as visited
+                window.location.href = "intro.html";
+            }
+        });
+    </script>
 
-<!DOCTYPE html>
-<html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
