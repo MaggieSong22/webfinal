@@ -8,6 +8,13 @@
     <p>If you are not redirected automatically, <a href="intro.html">click here</a>.</p>
 </body>
 </html>
+<script>
+    
+    if (!localStorage.getItem('visitedIntro')) {
+        window.location.href = "intro.html";
+    }
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
